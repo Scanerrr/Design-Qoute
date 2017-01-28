@@ -1,4 +1,19 @@
-header
-	h1.raleway Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	p.stnd Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	
+mixin menu_item(item, id)
+	ul.menu
+		li
+			a(href="##{id}")= item
+header.header
+	.logo
+	.nav
+		.nav-menu
+		.is-displayed
+			+menu_item("Home", 'home')
+			+menu_item("About Us", 'about_us')
+			+menu_item("Categories", 'categories')
+			+menu_item("Gallery", 'gallery')
+			+menu_item("Events", 'events')
+			+menu_item("Blog", 'blog')
+			+menu_item("Contact Us", 'contact_us')
+	h1 Smile
+	p it costs you nothing
+	.carousel
