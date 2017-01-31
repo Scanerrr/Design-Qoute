@@ -1,13 +1,172 @@
 /* HEADER STYLES */
-
-header.header
+.header
+  overflow: hidden
   background:
-    image: url("/assets/img/header-bg.png")
+    image: linear-gradient(rgba(234, 226, 209, 0.1), rgba(234, 226, 209, 0.1)), url("/assets/img/header-bg.png")
     size: cover
-    position: center
+    position: top
+  position: relative
+  padding-bottom: 80px
+
+  .logo
+    background: rgba(0, 0, 0, 1)
+    padding: 10px 30px
+    float: left
+    margin: 50px 0 0 200px
+
+    h1
+      text-align: center
+      color: $white
+      font:
+        size: 30px
+        weight: 700
+      letter-spacing: 7px
+      text-transform: uppercase
+
+  nav
+    .nav-menu
+      position: relative
+      // z-index: 1
+      float: right
+      margin: 75px 200px 0 0
+      border-top: 3px solid $white
+      border-bottom: 3px solid $white
+      font:
+        size: 15px
+        weight: 700
+      color: $white
+      line-height: 1.8em
+      letter-spacing: 2px
+      text-transform: uppercase
+      cursor: pointer
+      transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275)
+      transition-duration: 400ms
+      transform:scale(1.1,1.1)
+
+      &:hover
+        transform: scale(1.2,1.2)
+    .close-btn
+      display: none
+      z-index: 1
+      position: absolute
+      top: 5%
+      left: 85%
+      +size(50px)
+      overflow: hidden
+      cursor: pointer
+
+      &:hover
+        transform: scale(1.2,1.2)
+        opacity: .7
+
+      &::before, &::after
+        content: ''
+        position: absolute
+        height: 2px
+        width: 100%
+        top: 50%
+        left: 0
+        background: $white
+      &::before
+        @include transform(rotate(45deg))
+      &::after
+        @include transform(rotate(-45deg))
+      &::before, &::after
+          height: 4px
+          margin-top: -2px
 
 
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
+  .slogan
+    clear: both
+    text-align: center
+
+    h1
+      font:
+        size: 220px
+        weight: 100
+      color: $white
+      text-transform: uppercase
+      letter-spacing: 5px
+      margin: 0
+    p
+      font:
+        size: 64px
+        weight: 700
+      color: $white
+      letter-spacing: 2px
+      margin-top: -40px
+
+  .is-displayed
+    display: none
+    background: rgba(0, 0, 0, .9)
+    position: absolute
+    top: 0
+    +size(100%)
+
+    ul
+      // margin-top: 5%
+      list-style: none
+      text-align: center
+      padding: 50px 0
+
+      li
+        padding: .3% 10px
+        a
+          color: $grey
+          font:
+            size: 30px
+            weight: 700
+          letter-spacing: 5px
+          transition: all 0.4s
+
+          &:hover, &:focus
+            color: $white
+            text-decoration: underline
+
+  /*  MEDIA QUERIES FOR HEADER*/
+  @media (max-width: 1024px)
+    .logo
+      margin-left: 100px
+
+    nav
+      .nav-menu
+        margin-right: 100px
+
+  @media (max-width: 640px)
+    .logo
+      margin: 30px 0 0 30px
+      transform: scale(.9)
+
+    nav
+      .nav-menu
+        margin: 55px 30px 0 0
+        transform: scale(.9)
+
+      .close-btn
+        +size(40px)
+
+    .slogan
+      p
+        margin-top: -10px
+    .is-displayed
+      ul
+        padding: 20px 0
+        li
+          a
+            font-size: 28px
+
+  @media (max-width: 480px)
+    .logo
+      transform: scale(.8)
+      padding: 10px
+      margin: 0
+    nav
+      .nav-menu
+        margin: 30px 20px 0 0
+      .close-btn
+        +size(30px)
+    .is-displayed
+      ul
+        li
+          a
+            font-size: 22px

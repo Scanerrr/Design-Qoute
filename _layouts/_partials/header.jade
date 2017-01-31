@@ -1,12 +1,22 @@
+// menu list
 mixin menu_item(item, id)
-	ul.menu
-		li
-			a(href="##{id}")= item
+	li
+		a(href="##{id}")= item
+
 header.header
 	.logo
-	.nav
-		.nav-menu
-		.is-displayed
+		h1 Qoutes
+		
+	nav
+		.nav-menu Menu
+		span.close-btn
+
+	.slogan
+		h1 Smile
+		p it costs you nothing
+
+	.is-displayed
+		ul
 			+menu_item("Home", 'home')
 			+menu_item("About Us", 'about_us')
 			+menu_item("Categories", 'categories')
@@ -14,6 +24,3 @@ header.header
 			+menu_item("Events", 'events')
 			+menu_item("Blog", 'blog')
 			+menu_item("Contact Us", 'contact_us')
-	h1 Smile
-	p it costs you nothing
-	.carousel
