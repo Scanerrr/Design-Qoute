@@ -1,0 +1,10 @@
+//- menu list
+mixin menu_item(item, id)
+	li
+		a(href="##{id}")= item
+		
+//- social media icon list
+mixin social_item(url)
+	li
+		a(href="")
+			img(src="#{url}")
