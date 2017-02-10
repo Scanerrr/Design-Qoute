@@ -228,6 +228,9 @@ body {
 a {
   text-decoration: none; }
 
+.wrapper {
+  margin: 0 100px; }
+
 /* HEADER STYLES */
 .header {
   overflow: hidden;
@@ -385,6 +388,62 @@ a {
       width: 30px; }
     .header .is-displayed ul li a {
       font-size: 22px; } }
+
+section.description .wrapper {
+  text-align: center;
+  margin: 60px 300px; }
+  section.description .wrapper p {
+    font-size: 20px;
+    line-height: 1.3; }
+  section.description .wrapper h2 {
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.3em; }
+    section.description .wrapper h2 span {
+      display: block;
+      font-weight: 600; }
+  section.description .wrapper .lead-text {
+    margin-top: 40px; }
+    section.description .wrapper .lead-text p {
+      font-weight: 500;
+      margin: 0; }
+  section.description .wrapper hr {
+    width: 10%;
+    height: 0.1rem;
+    border: none;
+    background: #000;
+    margin: 30px auto 40px; }
+  section.description .wrapper .main-text {
+    margin-bottom: 50px; }
+
+section.quotes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #ffe9e2; }
+  section.quotes .quote {
+    width: 35%;
+    padding-top: 60px;
+    padding-bottom: 60px; }
+  section.quotes p {
+    font-size: 36px; }
+  section.quotes .text {
+    font-weight: 600; }
+  section.quotes .author {
+    font-weight: 200; }
+  section.quotes .bg-img {
+    width: 50%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(234, 226, 209, 0.2)), to(rgba(234, 226, 209, 0.2))), url("/assets/img/quote_pct.png");
+    background-image: -webkit-linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("/assets/img/quote_pct.png");
+    background-image: linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("/assets/img/quote_pct.png");
+    background-size: cover;
+    background-position: center; }
 
 footer.footer h3 {
   font-size: 20px;
