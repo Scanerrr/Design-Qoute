@@ -8,3 +8,13 @@ mixin social_item(url)
 	li
 		a(href="")
 			img(src="#{url}")
+		
+//- quotes block
+mixin quote(theme, text, author)
+	.quote
+		h3.theme= theme
+		p.text= text
+		if author == ""
+			p.author Anonymous
+		else
+			p.author= author

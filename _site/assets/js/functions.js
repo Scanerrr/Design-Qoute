@@ -5,6 +5,13 @@ $(function() {
   //implements fittext
   $(".slogan h1").fitText(0.4, { minFontSize: '80px', maxFontSize: '220px' });
   $(".slogan p").fitText(1.38, { minFontSize: '22px', maxFontSize: '64px' });
+  $(".quote .theme").fitText(1.3, { minFontSize: '22px', maxFontSize: '30px' });
+  $(".quote .text").fitText(1.3, { minFontSize: '14px', maxFontSize: '20px' });
+  $(".quote .author").fitText(1.3, { minFontSize: '14px', maxFontSize: '20px' });
+  $(".lead-head").fitText(1.3, { minFontSize: '32px', maxFontSize: '60px' });
+  $(".lead-text p").fitText(1.3, { minFontSize: '14px', maxFontSize: '20px' });
+  $(".main-text p").fitText(1.3, { minFontSize: '14px', maxFontSize: '20px' });
+
 });
 
 /* MENU */
