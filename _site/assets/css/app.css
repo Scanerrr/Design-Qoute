@@ -597,9 +597,12 @@ section.daily_quote {
         border-bottom: 0.1rem solid #fff; }
   @media (max-width: 720px) {
     section.daily_quote .quote {
-      margin: 50px 50px; }
+      margin: 50px; }
       section.daily_quote .quote .lead-head {
         width: 100%; } }
+  @media (max-width: 420px) {
+    section.daily_quote .quote {
+      margin: 25px; } }
 
 footer.footer h3 {
   font-size: 20px;
