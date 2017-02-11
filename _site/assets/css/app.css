@@ -487,7 +487,7 @@ section.quotes {
   section.quotes .author {
     font-weight: 200; }
   section.quotes .bg-img {
-    width: 50%;
+    width: 65%;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(234, 226, 209, 0.2)), to(rgba(234, 226, 209, 0.2))), url("/assets/img/quote_pct.png");
     background-image: -webkit-linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("/assets/img/quote_pct.png");
     background-image: linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("/assets/img/quote_pct.png");
@@ -563,6 +563,43 @@ section.user_quotes .btn-area {
       padding: 20px; }
   section.user_quotes .btn-area {
     margin: 40px 0; } }
+
+section.daily_quote {
+  background-image: url("/assets/img/daily_quote.png");
+  background-size: cover;
+  background-color: rgba(234, 226, 209, 0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  section.daily_quote .quote {
+    display: inline-block;
+    color: #fff;
+    margin: 100px 0; }
+    section.daily_quote .quote .lead-head {
+      text-align: center;
+      width: 50%;
+      margin: 0 auto 50px;
+      font-weight: 600; }
+    section.daily_quote .quote p {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 300; }
+      section.daily_quote .quote p .underline {
+        border-bottom: 0.1rem solid #fff; }
+  @media (max-width: 720px) {
+    section.daily_quote .quote {
+      margin: 50px 50px; }
+      section.daily_quote .quote .lead-head {
+        width: 100%; } }
 
 footer.footer h3 {
   font-size: 20px;

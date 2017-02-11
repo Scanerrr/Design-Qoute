@@ -11,6 +11,7 @@ $(function() {
   $(".lead-head").fitText(1.3, { minFontSize: '32px', maxFontSize: '60px' });
   $(".lead-text p").fitText(1.3, { minFontSize: '14px', maxFontSize: '20px' });
   $(".main-text p").fitText(1.3, { minFontSize: '14px', maxFontSize: '20px' });
+  $(".description").fitText(1.3, { minFontSize: '14px', maxFontSize: '20px' });
 
 });
 
