@@ -276,9 +276,9 @@ a {
 /* HEADER STYLES */
 .header {
   overflow: hidden;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(234, 226, 209, 0.1)), to(rgba(234, 226, 209, 0.1))), url("/assets/img/header-bg.png");
-  background-image: -webkit-linear-gradient(rgba(234, 226, 209, 0.1), rgba(234, 226, 209, 0.1)), url("/assets/img/header-bg.png");
-  background-image: linear-gradient(rgba(234, 226, 209, 0.1), rgba(234, 226, 209, 0.1)), url("/assets/img/header-bg.png");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(234, 226, 209, 0.1)), to(rgba(234, 226, 209, 0.1))), url("assets/img/header-bg.png");
+  background-image: -webkit-linear-gradient(rgba(234, 226, 209, 0.1), rgba(234, 226, 209, 0.1)), url("assets/img/header-bg.png");
+  background-image: linear-gradient(rgba(234, 226, 209, 0.1), rgba(234, 226, 209, 0.1)), url("assets/img/header-bg.png");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -493,9 +493,9 @@ section.quotes {
     font-weight: 200; }
   section.quotes .bg-img {
     width: 65%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(234, 226, 209, 0.2)), to(rgba(234, 226, 209, 0.2))), url("/assets/img/quote_pct.png");
-    background-image: -webkit-linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("/assets/img/quote_pct.png");
-    background-image: linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("/assets/img/quote_pct.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(234, 226, 209, 0.2)), to(rgba(234, 226, 209, 0.2))), url("assets/img/quote_pct.png");
+    background-image: -webkit-linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("assets/img/quote_pct.png");
+    background-image: linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("assets/img/quote_pct.png");
     background-size: cover;
     background-position: center; }
   @media (max-width: 720px) {
@@ -571,7 +571,7 @@ section.user_quotes .btn-area {
     margin: 40px 0; } }
 
 section.daily_quote {
-  background-image: url("/assets/img/daily_quote.png");
+  background-image: url("assets/img/daily_quote.png");
   background-size: cover;
   background-color: rgba(234, 226, 209, 0.2);
   display: -webkit-box;
