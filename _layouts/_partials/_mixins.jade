@@ -6,7 +6,7 @@ mixin menu_item(item, id)
 //- social media icon list
 mixin social_item(url)
 	li
-		a(href="")
+		a(href="#")
 			img(src="#{url}")
 		
 //- quotes block
@@ -26,5 +26,5 @@ mixin poster(url, text, main)
 			p.quote-text!= text
 		if main == "true"
 			.action
-				a(href="") Buy Now
-				a(href="") Share
+				a(href="#") Buy Now
+				a(href="#") Share
