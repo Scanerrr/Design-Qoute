@@ -233,6 +233,7 @@ a {
 
 .lead-head {
   font-size: 60px;
+  font-weight: 600;
   margin: 0;
   line-height: 1.3em; }
 
@@ -252,7 +253,7 @@ a {
   border: 2px solid #000;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  background: #fff;
+  background: transparent;
   letter-spacing: 3px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
@@ -462,6 +463,10 @@ section.description .wrapper {
   section.description .wrapper {
     margin: 30px 50px; } }
 
+@media (max-width: 720px) {
+  section.description .lead-head {
+    margin-top: 50px; } }
+
 @media (max-width: 420px) {
   section.description .wrapper {
     margin: 20px 25px; } }
@@ -504,11 +509,12 @@ section.quotes {
       display: none; } }
 
 section.user_quotes .lead-head {
-  font-weight: 600;
   margin-top: 100px; }
 
 section.user_quotes .devider {
-  margin: 20px 0 80px; }
+  margin: 20px 0 80px;
+  -webkit-box-shadow: 0 1px;
+          box-shadow: 0 1px; }
 
 section.user_quotes .quotes {
   display: -webkit-box;
@@ -603,6 +609,236 @@ section.daily_quote {
   @media (max-width: 420px) {
     section.daily_quote .quote {
       margin: 25px; } }
+
+section.posters {
+  background: #f2f4f5; }
+  section.posters .lead-head {
+    padding-top: 100px; }
+  section.posters .devider {
+    margin: 20px 0 80px; }
+  section.posters .posters-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 650px; }
+    section.posters .posters-grid .main-area {
+      width: 40%;
+      margin-right: 50px; }
+      section.posters .posters-grid .main-area .poster {
+        background-position: top left;
+        -webkit-box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3); }
+        section.posters .posters-grid .main-area .poster:hover {
+          cursor: default; }
+        section.posters .posters-grid .main-area .poster .quote {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+      section.posters .posters-grid .main-area .quote-text {
+        text-align: center;
+        font-size: 80px;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase; }
+    section.posters .posters-grid .sub-area {
+      width: 60%; }
+      section.posters .posters-grid .sub-area::after {
+        clear: both;
+        content: "";
+        display: table; }
+      section.posters .posters-grid .sub-area .poster-2 {
+        width: 100%;
+        height: 50%;
+        padding-bottom: 50px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; }
+        section.posters .posters-grid .sub-area .poster-2 .poster {
+          background-position: 0 38%; }
+        section.posters .posters-grid .sub-area .poster-2 .quote-text {
+          font-size: 36px;
+          font-weight: 600;
+          font-style: italic;
+          color: #000;
+          margin: 50px 20px 0 50px; }
+          section.posters .posters-grid .sub-area .poster-2 .quote-text span {
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            font-style: normal;
+            color: #000; }
+      section.posters .posters-grid .sub-area .poster-1 {
+        width: 50%;
+        float: left;
+        padding-right: 25px;
+        height: 50%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; }
+        section.posters .posters-grid .sub-area .poster-1 .poster {
+          background-position-y: 50px;
+          background-color: #e7e6e5;
+          background-repeat: no-repeat; }
+        section.posters .posters-grid .sub-area .poster-1 .quote-text {
+          text-align: center;
+          font-size: 30px;
+          font-weight: 700;
+          color: #fff;
+          text-transform: uppercase;
+          line-height: 2.5rem; }
+          section.posters .posters-grid .sub-area .poster-1 .quote-text span {
+            font-size: 31px;
+            font-weight: 800; }
+        section.posters .posters-grid .sub-area .poster-1:last-child {
+          padding-left: 25px;
+          padding-right: 0; }
+          section.posters .posters-grid .sub-area .poster-1:last-child .poster {
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(234, 226, 209, 0.2); }
+          section.posters .posters-grid .sub-area .poster-1:last-child .quote {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+            height: 100%; }
+    section.posters .posters-grid .black {
+      color: #000; }
+    section.posters .posters-grid .poster {
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(234, 226, 209, 0.2);
+      height: 100%;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      section.posters .posters-grid .poster:hover {
+        -webkit-box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer; }
+      section.posters .posters-grid .poster .quote {
+        display: inline-block;
+        width: 100%;
+        height: 85%; }
+      section.posters .posters-grid .poster .action {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 15%; }
+        section.posters .posters-grid .poster .action a {
+          font-size: 20px;
+          font-weight: 600;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-decoration: none;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          padding: 10px 15px;
+          margin: 25px 0; }
+          section.posters .posters-grid .poster .action a:hover {
+            outline: 0.1rem solid #fff; }
+  section.posters .btn-area {
+    padding: 80px 0 100px;
+    text-align: center; }
+    section.posters .btn-area .btn {
+      font-weight: 700; }
+  @media (max-width: 1024px) {
+    section.posters .posters-grid {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: auto; }
+      section.posters .posters-grid .main-area {
+        width: auto;
+        margin-right: 0; }
+      section.posters .posters-grid .sub-area {
+        width: 100%;
+        height: 500px; }
+        section.posters .posters-grid .sub-area .poster-2 {
+          padding-top: 50px;
+          -webkit-box-sizing: inherit;
+                  box-sizing: inherit; }
+          section.posters .posters-grid .sub-area .poster-2 .quote-text {
+            font-size: 30px;
+            margin: 30px 15px 0 30px; }
+    section.posters .btn-area {
+      padding-top: 150px; } }
+  @media (max-width: 640px) {
+    section.posters .lead-head {
+      padding-top: 50px; } }
+  @media (max-width: 575px) {
+    section.posters .posters-grid .main-area {
+      width: 100%; }
+    section.posters .posters-grid .sub-area {
+      height: 350px; }
+      section.posters .posters-grid .sub-area .poster-1 {
+        padding-right: 10px; }
+        section.posters .posters-grid .sub-area .poster-1 .quote-text span {
+          font-size: 24px; }
+        section.posters .posters-grid .sub-area .poster-1:last-child {
+          padding-left: 10px; }
+          section.posters .posters-grid .sub-area .poster-1:last-child .quote-text {
+            font-size: 22px; }
+      section.posters .posters-grid .sub-area .poster-2 {
+        padding-top: 25px;
+        padding-bottom: 25px; }
+        section.posters .posters-grid .sub-area .poster-2 .quote-text {
+          font-size: 25px;
+          margin: 15px 10px 0 15px; } }
+  @media (max-width: 395px) {
+    section.posters .posters-grid .main-area .quote-text {
+      font-size: 32px !important; }
+    section.posters .posters-grid .main-area .action a {
+      font-size: 14px; }
+      section.posters .posters-grid .main-area .action a:hover {
+        outline: none; }
+    section.posters .posters-grid .sub-area .poster-2 .quote-text {
+      font-size: 20px;
+      margin: 15px; }
+    section.posters .posters-grid .sub-area .poster-1 {
+      float: none;
+      width: 100%;
+      padding-right: 0; }
+      section.posters .posters-grid .sub-area .poster-1:last-child {
+        padding-left: 0;
+        padding-top: 25px; }
+    section.posters .btn-area {
+      padding-top: 0;
+      margin-top: 260px; } }
 
 footer.footer h3 {
   font-size: 20px;

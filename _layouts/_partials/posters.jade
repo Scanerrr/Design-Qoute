@@ -1,0 +1,18 @@
+include _mixins.jade
+
+section.posters
+  .wrapper
+    h2.lead-head Buy Posters Prints
+    hr.devider
+    .posters-grid
+      .main-area
+        +poster("/assets/img/main_poster.png", "Stay<br/>True,<br/>Stay<br/>Gentleman", "true")
+      .sub-area
+        .poster-2
+          +poster("/assets/img/poster-2.png", "And muse of nature<br/>with a poet’s eye<span>Thomas Campbell</span>", "")
+        .poster-1
+          +poster("/assets/img/poster-3.jpg", "<span class='black'>Make Work<br/>Fun &amp; Play</span>", "")
+        .poster-1
+          +poster("/assets/img/poster-4.png", "Silence is<br/><span>Golden</span>", "")
+    .btn-area
+      a(href="", class="btn") Browse Posters

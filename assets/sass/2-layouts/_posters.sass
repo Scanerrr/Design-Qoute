@@ -1,0 +1,204 @@
+section.posters
+  background: $grey-bg
+  .lead-head
+    padding-top: 100px
+  .devider
+    margin: 20px 0 80px
+
+  .posters-grid
+    display: flex
+    height: 650px
+    .main-area
+      width: 40%
+      margin-right: 50px
+      .poster
+        background-position: top left
+        box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3)
+        &:hover
+          cursor: default
+        .quote
+          display: flex
+          justify-content: center
+          align-items: center
+      .quote-text
+        text-align: center
+        font:
+          size: 80px
+          weight: 700
+        color: $white
+        text-transform: uppercase
+
+    .sub-area
+      +clearfix()
+      width: 60%
+      .poster-2
+        width: 100%
+        height: 50%
+        padding-bottom: 50px
+        box-sizing: border-box
+        .poster
+          background-position: 0 38%
+        .quote-text
+          font:
+            size: 36px
+            weight: 600
+            style: italic
+          color: $black
+          margin: 50px 20px 0 50px
+          span
+            display: block
+            font:
+              size: 20px
+              weight: 400
+              style: normal
+            color: $black
+
+      .poster-1
+        width: 50%
+        float: left
+        padding-right: 25px
+        height: 50%
+        box-sizing: border-box
+        .poster
+          background-position-y: 50px
+          background-color: #e7e6e5
+          background-repeat: no-repeat
+        .quote-text
+          text-align: center
+          font:
+            size: 30px
+            weight: 700
+          color: $white
+          text-transform: uppercase
+          line-height: 2.5rem
+          span
+            font:
+              size: 31px
+              weight: 800
+
+        &:last-child
+          padding-left: 25px
+          padding-right: 0
+          .poster
+            background:
+              size: cover
+              position: center
+              color: rgba(234, 226, 209, 0.2)
+          .quote
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            height: 100%
+
+    .black
+      color: $black
+    .poster
+      background:
+        size: cover
+        position: center
+        color: rgba(234, 226, 209, 0.2)
+      height: 100%
+      transition: all 0.3s
+      &:hover
+        box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.3)
+        cursor: pointer
+
+      .quote
+        display: inline-block
+        width: 100%
+        height: 85%
+      .action
+        display: flex
+        justify-content: space-around
+        align-items: center
+        height: 15%
+        a
+          font:
+            size: 20px
+            weight: 600
+          color: $white
+          text-transform: uppercase
+          letter-spacing: 2px
+          text-decoration: none
+          transition: all 0.3s
+          padding: 10px 15px
+          margin: 25px 0
+          &:hover
+            outline: 0.1rem solid $white
+  .btn-area
+    padding: 80px 0 100px
+    text-align: center
+    .btn
+      font-weight: 700
+
+  @media (max-width: 1024px)
+    .posters-grid
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      height: auto
+      .main-area
+        width: auto
+        margin-right: 0
+      .sub-area
+        width: 100%
+        height: 500px
+        .poster-2
+          padding-top: 50px
+          box-sizing: inherit
+          .quote-text
+            font-size: 30px
+            margin: 30px 15px 0 30px
+    .btn-area
+      padding-top: 150px
+
+  @media (max-width: 640px)
+    .lead-head
+      padding-top: 50px
+  @media (max-width: 575px)
+    .posters-grid
+      .main-area
+        width: 100%
+      .sub-area
+        height: 350px
+        .poster-1
+          padding-right: 10px
+          .quote-text
+            span
+              font-size: 24px
+          &:last-child
+            padding-left: 10px
+            .quote-text
+              font-size: 22px
+        .poster-2
+          padding-top: 25px
+          padding-bottom: 25px
+          .quote-text
+            font-size: 25px
+            margin: 15px 10px 0 15px
+
+  @media (max-width: 395px)
+    .posters-grid
+      .main-area
+        .quote-text
+          font-size: 32px !important
+        .action
+          a
+            font-size: 14px
+            &:hover
+              outline: none
+      .sub-area
+        .poster-2
+          .quote-text
+            font-size: 20px
+            margin: 15px
+        .poster-1
+          float: none
+          width: 100%
+          padding-right: 0
+          &:last-child
+            padding-left: 0
+            padding-top: 25px
+    .btn-area
+      padding-top: 0
+      margin-top: 260px

@@ -18,3 +18,13 @@ mixin quote(theme, text, author)
 			p.author Anonymous
 		else
 			p.author= author
+		
+//- posters
+mixin poster(url, text, main)
+	.poster(style='background-image: linear-gradient(rgba(234, 226, 209, 0.2), rgba(234, 226, 209, 0.2)), url("#{url}")')
+		.quote
+			p.quote-text!= text
+		if main == "true"
+			.action
+				a(href="") Buy Now
+				a(href="") Share
