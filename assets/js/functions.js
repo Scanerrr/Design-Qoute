@@ -1,7 +1,8 @@
 /* MAIN js */
 $(function() {
+  smoothSroll(400);
+  backToTopBtn();
   menuBtn();
-
   //implements fittext
   $(".slogan h1").fitText(0.4, { minFontSize: '80px', maxFontSize: '220px' });
   $(".slogan p").fitText(1.38, { minFontSize: '22px', maxFontSize: '64px' });
@@ -15,6 +16,29 @@ $(function() {
   $(".main-area .quote-text").fitText(0.8, { minFontSize: '52px', maxFontSize: '80px' });
 
 });
+
+// SMOOTH SCROLLING TO TOP
+function smoothSroll(duration) {
+  var top_btn = $(".top_btn");
+  top_btn.on("click", function(e) {
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: 0
+    }, duration);
+  });
+}
+
+// SHOW BACK TO TOP BUTTON
+function backToTopBtn() {
+  var top_btn = $(".top_btn");
+  $(window).on("scroll", function() {
+    if ($(this).scrollTop() > 100) {
+      top_btn.fadeIn();
+    } else {
+      top_btn.fadeOut();
+    }
+  });
+}
 
 /* MENU */
 function menuBtn() {
@@ -41,6 +65,7 @@ function toggleMenu(status) {
     });
   }
 }
+
 /* jQuery fittext plugin */
 (function($) {
 
