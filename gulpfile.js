@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	prefix = require('gulp-autoprefixer'),
 	sass = require('gulp-sass'),
+	uncss = require('gulp-uncss'),
 	browserSync = require('browser-sync');
 
 /*
@@ -30,9 +31,7 @@ gulp.task('jade', function () {
         .pipe(data(function (file) {
             return require('./_layouts/_data/' + path.basename(file.path) + '.json');
         }))
-        .pipe(jade({
-            pretty: true
-        }))
+        .pipe(jade())
         .pipe(gulp.dest(settings.publicDir))
         .pipe(browserSync.reload({stream: true}));
 });
@@ -64,10 +63,14 @@ gulp.task('sass', function () {
 	return gulp.src(settings.sassDir + '/*.sass')
 		.pipe(sass({
 			includePaths: [settings.sassDir],
-			onError: browserSync.notify
+			onError: browserSync.notify,
+			outputStyle: 'compressed'
 		}))
 		.on('error', sass.logError)
 		.pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
+		.pipe(uncss({
+			html: ['_site/index.html']
+		}))
 		.pipe(gulp.dest(settings.cssDir))
 		.pipe(browserSync.reload({stream: true}));
 });
